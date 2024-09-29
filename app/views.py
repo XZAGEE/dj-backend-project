@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def hello(request):
-    return HttpResponse('<h1>hello wrld</h1>')
+    return render(request, 'hello.html', {'name':"Yurii"})
+
 def empty(request):
     return HttpResponse('')
 
